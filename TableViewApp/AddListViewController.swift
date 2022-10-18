@@ -18,12 +18,9 @@ class AddListViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         if userDefaults.object(forKey: "add") != nil{
             taskArray = userDefaults.object(forKey: "add") as! [String]
-            //削除機能UserDefaultsからすでに削除されているタスクをtaskArrayから除く？
-            if userDefaults.object(forKey: "delete") != nil {
-                taskArray = userDefaults.object(forKey: "delete") as! [String]
-            }
         }
     }
+    
     @IBAction func addTask(_ sender: UIButton) {
         let userDefaults = UserDefaults.standard //そのままだと長いので変数にいれる
         taskArray.append(addText.text!)

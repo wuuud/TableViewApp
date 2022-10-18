@@ -81,8 +81,8 @@ class TableViewController: UITableViewController{
             taskArray.remove(at: indexPath.row)
             tableView.deleteRows(at: [indexPath as IndexPath], with: UITableView.RowAnimation.automatic)
             // 追加：削除した内容を保存
-            let userDefaults = UserDefaults.standard
-            userDefaults.set(taskArray, forKey: "delete")
+                      let userDefaults = UserDefaults.standard
+                       userDefaults.set(taskArray, forKey: "add")
         }
     }
 }
