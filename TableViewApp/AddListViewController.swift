@@ -21,7 +21,6 @@ class AddListViewController: UIViewController {
         let userDefaults = UserDefaults.standard
         if userDefaults.object(forKey: "add") != nil{
             taskArray = userDefaults.object(forKey: "add") as! [String]
-        
         }
     }
     
@@ -36,7 +35,4 @@ class AddListViewController: UIViewController {
             errorLabel.text = "未入力です"
         }
     }
-        
-    
-    
 }
